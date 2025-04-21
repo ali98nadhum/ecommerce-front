@@ -1,0 +1,45 @@
+/* Container.css */
+
+.responsive-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+/* على الشاشات الصغيرة جداً */
+@media (min-width: 480px) {
+  .responsive-container {
+    max-width: 100%;
+  }
+}
+
+/* على الشاشات المتوسطة (تابلت) */
+@media (min-width: 768px) {
+  .responsive-container {
+    max-width: 720px;
+  }
+}
+
+/* على الشاشات الكبيرة (لابتوب) */
+@media (min-width: 1024px) {
+  .responsive-container {
+    max-width: 960px;
+  }
+}
+
+/* على الشاشات الأكبر (ديسكتوب عريض) */
+@media (min-width: 1280px) {
+  .responsive-container {
+    max-width: 1140px;
+  }
+}
+
+/* على الشاشات الضخمة (4K) */
+@media (min-width: 1536px) {
+  .responsive-container {
+    max-width: 1280px;
+  }
+}
