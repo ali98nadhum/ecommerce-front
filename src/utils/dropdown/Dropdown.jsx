@@ -17,7 +17,7 @@ const Dropdown = () => {
       </Link>
       <Link to={""} className="flex w-40 items-center justify-between mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5" dir="rtl">
         <p>حذف الحساب</p>
-        <MdDelete />
+        <MdDelete className="text-red-600" />
       </Link>
     </div>
   );
