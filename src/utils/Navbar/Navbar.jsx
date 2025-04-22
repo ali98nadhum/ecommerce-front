@@ -22,22 +22,19 @@ const Navbar = () => {
           <div className="center">
             <ul className="flex items-center justify-between gap-4">
               <li>
-                {" "}
                 <Link to={"/"} className="font-medium">
                   المفضله
-                </Link>{" "}
+                </Link>
               </li>
               <li>
-                {" "}
                 <Link to={"/"} className="font-medium">
                   طلباتي
-                </Link>{" "}
+                </Link>
               </li>
               <li>
-                {" "}
                 <Link to={"/"} className="font-medium">
                   الرئيسيه
-                </Link>{" "}
+                </Link>
               </li>
             </ul>
           </div>
