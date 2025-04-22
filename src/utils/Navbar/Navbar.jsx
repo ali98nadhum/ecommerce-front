@@ -4,9 +4,8 @@ import avatar from "../../assets/avatar.svg";
 import Container from "../../components/Container/Container";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
-import { CiSettings } from "react-icons/ci";
-import { MdDelete } from "react-icons/md";
-import { MdOutlinePassword } from "react-icons/md";
+
+import Dropdown from "../dropdown/Dropdown";
 
 
 
@@ -39,20 +38,7 @@ const Navbar = () => {
             <div className="avatar relative">
             <img src={avatar} alt="" className="w-11 h-11 cursor-pointer"  onClick={() => setDropdownOpen(prev => !prev)} />
            {dropdownOpen &&(
-             <div className="absolute right-0 mt-2 w-44 bg-white shadow-lg border border-gray-200 rounded-md z-50 p-3 flex items-center justify-center flex-col">
-             <Link to={""} className="flex w-40 items-center justify-between  mt-1.5">
-             <p>الاعدادات</p>
-             <CiSettings/>
-             </Link>
-             <Link to={""} className="flex w-40 items-center justify-between  mt-1.5">
-             <p>تغير كلمه المرور</p>
-             <MdOutlinePassword/>
-             </Link>
-             <Link to={""} className="flex w-40 items-center justify-between mt-1.5">
-             <p>حذف الحساب</p>
-             <MdDelete/>
-             </Link>
-            </div>
+            <Dropdown/>
            )}
             </div>
           </div>
