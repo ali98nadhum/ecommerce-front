@@ -15,7 +15,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [user, setUser] = useState(true);
   return (
-    <nav className="navbar p-2.5 h-20 w-full flex items-center shadow-md shadow-gray-400/30">
+    <nav className="navbar p-2.5 h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
       <Container>
         <div className="flex items-center justify-between">
           {/* ===== Logo ===== */}
