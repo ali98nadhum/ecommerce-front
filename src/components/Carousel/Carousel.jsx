@@ -4,10 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-  "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide1.png",
-  "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide2.png",
-  "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide3.png",
-  "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide4.png",
+  "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
+  "https://images.samsung.com/is/image/samsung/assets/cl/home/2025/w6/BANNER-s25-P.png?imwidth=1366",
+  "https://s.alicdn.com/@sc02/kf/Hc1f3c8ff3e884fbe8bdeb951cb25888br.jpg_750x750q80.jpg",
+  "https://image.makewebeasy.net/makeweb/m_1920x0/TPguOW5od/Sony_page%2FBanner_Sony_03.jpg?v=202405291",
+  "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg"
 ];
 
 const Carousel = () => {
