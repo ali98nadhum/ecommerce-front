@@ -5,6 +5,9 @@ import Container from "../../components/Container/Container";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { RiDiscountPercentLine } from "react-icons/ri";
+import { MdFavoriteBorder } from "react-icons/md";
+import { TfiDropbox } from "react-icons/tfi";
+import { GoHome } from "react-icons/go";
 import Dropdown from "../dropdown/Dropdown";
 
 const Navbar = () => {
@@ -24,6 +27,26 @@ const Navbar = () => {
           {/* ===== Links ====== */}
           <div className="center">
             <ul className="flex items-center justify-center gap-4">
+            <li>
+                <Link
+                  to={"/"}
+                  className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
+                >
+                  <GoHome className="text-green-600 text-2xl"/>
+                  <p>الرئيسيه</p>
+                </Link>
+              </li>
+              {user && (
+                <li>
+                  <Link
+                    to={"/"}
+                    className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
+                  >
+                    <TfiDropbox className="text-green-600 text-2xl"/>
+                    <p>طلباتي</p>
+                  </Link>
+                </li>
+              )}
               <li>
                 <Link
                   to={"/"}
@@ -36,27 +59,10 @@ const Navbar = () => {
               <li>
                 <Link
                   to={"/"}
-                  className="font-medium transition-all duration-300 hover:text-green-600 hover:scale-105"
+                  className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                 >
-                  المفضله
-                </Link>
-              </li>
-              {user && (
-                <li>
-                  <Link
-                    to={"/"}
-                    className="font-medium transition-all duration-300 hover:text-green-600 hover:scale-105"
-                  >
-                    طلباتي
-                  </Link>
-                </li>
-              )}
-              <li>
-                <Link
-                  to={"/"}
-                  className="font-medium transition-all duration-300 hover:text-green-600 hover:scale-105"
-                >
-                  الرئيسيه
+                  <MdFavoriteBorder className="text-green-600 text-2xl hover:text-red-600"/>
+                  <p>المفضله</p>
                 </Link>
               </li>
             </ul>
