@@ -5,7 +5,7 @@ import Container from "../../components/Container/Container";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { RiDiscountPercentLine } from "react-icons/ri";
-import { MdFavoriteBorder } from "react-icons/md";
+import { MdFavoriteBorder , MdLanguage } from "react-icons/md";
 import { TfiDropbox } from "react-icons/tfi";
 import { GoHome } from "react-icons/go";
 import Dropdown from "../dropdown/Dropdown";
@@ -17,6 +17,7 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const cartItemCount = 6;
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [user, setUser] = useState(true);
   useEffect(() => {
     document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
@@ -77,7 +78,39 @@ const Navbar = () => {
             </ul>
           </div>
           {/* ===== Rigth sec ===== */}
-          <div className="right relative flex items-center justify-between gap-8">
+          <div className="right relative flex items-center justify-between gap-6 cursor-pointer">
+            {/* language icon */}
+            <div className="relative">
+  <MdLanguage
+    className="text-2xl cursor-pointer"
+    onClick={() => setLangOpen((prev) => !prev)}
+  />
+  {langOpen && (
+    <div className="absolute top-full mt-2 right-0 bg-white border border-gray-200 rounded-md shadow-md w-28 z-50 text-sm">
+   <button
+  onClick={() => {
+    i18n.changeLanguage("ar");
+    setLangOpen(false);
+  }}
+  className="block w-full px-4 py-2 text-right hover:bg-gray-100 flex items-center gap-2"
+>
+  🇸🇦 <span>العربية</span>
+</button>
+<button
+  onClick={() => {
+    i18n.changeLanguage("en");
+    setLangOpen(false);
+  }}
+  className="block w-full px-4 py-2 text-right hover:bg-gray-100 flex items-center gap-2"
+>
+  🇺🇸 <span>English</span>
+</button>
+
+    </div>
+  )}
+</div>
+
+
             {/* cart icon */}
             <Link to={"/cart"} className="relative">
               <FiShoppingCart className="text-2xl" />
