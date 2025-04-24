@@ -1,15 +1,18 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import Container from "../../components/Container/Container";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Carousel from "../../components/Carousel/Carousel";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { LuArrowLeft } from "react-icons/lu";
+import SectionTitleBar from "../../components/SectionTitleBar/SectionTitleBar";
 
 const HomePage = () => {
-   const { t, i18n } = useTranslation();
-    useEffect(() => {
-       document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-     }, [i18n.language]);
-   
+  const { t, i18n } = useTranslation();
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]);
+
   return (
     <div className="home">
       <Container>
@@ -20,6 +23,8 @@ const HomePage = () => {
         </div>
         {/* ===== Carousel ===== */}
         <Carousel />
+        {/* ===== SectionTitleBar ===== */}
+        <SectionTitleBar title={"الأقسام"} link={"/category"} />
       </Container>
     </div>
   );
