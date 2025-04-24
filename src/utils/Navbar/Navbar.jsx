@@ -9,6 +9,7 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { TfiDropbox } from "react-icons/tfi";
 import { GoHome } from "react-icons/go";
 import Dropdown from "../dropdown/Dropdown";
+import "./navbar.css";
 
 const Navbar = () => {
   const cartItemCount = 6;
@@ -27,12 +28,12 @@ const Navbar = () => {
           {/* ===== Links ====== */}
           <div className="center">
             <ul className="flex items-center justify-center gap-4">
-            <li>
+              <li>
                 <Link
                   to={"/"}
                   className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                 >
-                  <GoHome className="text-green-600 text-2xl"/>
+                  <GoHome className="text-green-600 text-2xl" />
                   <p>الرئيسيه</p>
                 </Link>
               </li>
@@ -42,7 +43,7 @@ const Navbar = () => {
                     to={"/"}
                     className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                   >
-                    <TfiDropbox className="text-green-600 text-2xl"/>
+                    <TfiDropbox className="text-green-600 text-2xl" />
                     <p>طلباتي</p>
                   </Link>
                 </li>
@@ -61,7 +62,7 @@ const Navbar = () => {
                   to={"/"}
                   className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                 >
-                  <MdFavoriteBorder className="text-green-600 text-2xl hover:text-red-600"/>
+                  <MdFavoriteBorder className="text-green-600 text-2xl hover:text-red-600" />
                   <p>المفضله</p>
                 </Link>
               </li>
@@ -87,7 +88,11 @@ const Navbar = () => {
                   className="w-11 h-11 cursor-pointer"
                   onClick={() => setDropdownOpen((prev) => !prev)}
                 />
-                {dropdownOpen && <Dropdown />}
+                {dropdownOpen && (
+                  <div className="absolute top-full mt-1 right-0 z-50 animate-fade-in">
+                    <Dropdown />
+                  </div>
+                )}
               </div>
             ) : (
               // login button
