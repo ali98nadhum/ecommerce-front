@@ -3,8 +3,6 @@ import Container from "../../components/Container/Container";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Carousel from "../../components/Carousel/Carousel";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { LuArrowLeft } from "react-icons/lu";
 import SectionTitleBar from "../../components/SectionTitleBar/SectionTitleBar";
 
 const HomePage = () => {
@@ -24,7 +22,7 @@ const HomePage = () => {
         {/* ===== Carousel ===== */}
         <Carousel />
         {/* ===== SectionTitleBar ===== */}
-        <SectionTitleBar title={"الأقسام"} link={"/category"} />
+        <SectionTitleBar title={t("category-title")} link={"/category"} />
       </Container>
     </div>
   );
