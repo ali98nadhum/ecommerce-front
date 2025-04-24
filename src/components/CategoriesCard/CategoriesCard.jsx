@@ -10,7 +10,7 @@ const CategoriesCard = ({ item }) => {
           src={item.image}
           alt={item.name}
         />
-        <p className="text-base font-semibold text-gray-700">{item.name}</p>
+        <p className="text-xs sm:text-base font-semibold text-gray-700">{item.name}</p>
       </div>
     </div>
   );
