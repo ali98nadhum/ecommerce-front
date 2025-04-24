@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 const SearchBar = () => {
+   const { t, i18n } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
-  console.log(searchQuery);
+
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
 
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
@@ -20,7 +25,7 @@ const SearchBar = () => {
       </svg>
       <input
         type="text"
-        placeholder="ابحث عن منتج .."
+        placeholder={t("Search-title")}
         className="w-full h-full outline-none text-gray-500 placeholder-gray-500 text-sm"
         onChange={handleSearchChange}
       />
