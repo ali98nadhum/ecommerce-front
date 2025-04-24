@@ -8,6 +8,10 @@
     "login": "تسجيل الدخول",
     "Search-title": "ابحث عن منتج ...",
     "category-title": "الأقسام",
-    "more": "المزيد"
+    "more": "المزيد",
+    "settings": "الأعدادات",
+    "change-password": "تغير كلمه المرور",
+    "delete-account": "حذف الحساب",
+    "logout": "تسجيل الخروج"
   }
   

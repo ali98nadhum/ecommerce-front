@@ -7,6 +7,10 @@
     "login": "Login",
     "Search-title": "Search for a product...",
     "category-title": "Categories",
-    "more": "More"
+    "more": "More",
+    "settings": "Settings",
+    "change-password": "Change password",
+    "delete-account": "Delete account",
+    "logout": "Logout"
   }
   

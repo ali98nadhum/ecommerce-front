@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import { CiSettings } from "react-icons/ci";
 import { MdOutlinePassword , MdDelete , MdOutlineLogout } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 const Dropdown = () => {
+
+   const { t, i18n } = useTranslation();
+      useEffect(() => {
+        document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+      }, [i18n.language]);
 
   const handleLogout = () => {
    console.log("logout");
@@ -11,24 +17,22 @@ const Dropdown = () => {
   };
   return (
     <div className="absolute right-0 mt-4 w-44 bg-white shadow-lg border border-gray-200 rounded-md z-50 p-3 flex items-center justify-center flex-col">
-      <Link to={""} className="flex w-40 items-center justify-between  mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5" dir="rtl">
-        <p>الاعدادات</p>
+      <Link to={""} className="flex w-40 items-center justify-between  mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5">
+        <p> {t("settings")} </p>
         <CiSettings />
       </Link>
-      <Link to={""} className="flex w-40 items-center justify-between  mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5" dir="rtl">
-        <p>تغير كلمه المرور</p>
+      <Link to={""} className="flex w-40 items-center justify-between  mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5">
+        <p> {t("change-password")} </p>
         <MdOutlinePassword />
       </Link>
-      <Link to={""} className="flex w-40 items-center justify-between mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5" dir="rtl">
-        <p>حذف الحساب</p>
+      <Link to={""} className="flex w-40 items-center justify-between mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5" >
+        <p> {t("delete-account")} </p>
         <MdDelete className="text-red-600" />
       </Link>
       <button
         onClick={handleLogout}
-        className="flex w-40 items-center justify-between mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5 text-red-500 cursor-pointer"
-        dir="rtl"
-      >
-        <p>تسجيل الخروج</p>
+        className="flex w-40 items-center justify-between mt-1.5 hover:bg-gray-100 py-1 rounded p-1.5 text-red-500 cursor-pointer" >
+        <p> {t("logout")} </p>
         <MdOutlineLogout />
       </button>
 
