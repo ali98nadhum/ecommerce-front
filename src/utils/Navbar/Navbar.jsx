@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import logo from "../../assets/logo.png";
 import avatar from "../../assets/avatar.svg";
 import Container from "../../components/Container/Container";
@@ -9,12 +9,20 @@ import { MdFavoriteBorder } from "react-icons/md";
 import { TfiDropbox } from "react-icons/tfi";
 import { GoHome } from "react-icons/go";
 import Dropdown from "../dropdown/Dropdown";
+import { useTranslation } from 'react-i18next';
 import "./navbar.css";
 
+
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const cartItemCount = 6;
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [user, setUser] = useState(true);
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+  }, [i18n.language]);
+
+
   return (
     <nav className="navbar p-2.5 h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
       <Container>
@@ -34,7 +42,7 @@ const Navbar = () => {
                   className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                 >
                   <GoHome className="text-green-600 text-2xl" />
-                  <p>الرئيسيه</p>
+                  <p>{t('home')}</p>
                 </Link>
               </li>
               {user && (
@@ -44,7 +52,7 @@ const Navbar = () => {
                     className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                   >
                     <TfiDropbox className="text-green-600 text-2xl" />
-                    <p>طلباتي</p>
+                    <p>{t('orders')}</p>
                   </Link>
                 </li>
               )}
@@ -54,7 +62,7 @@ const Navbar = () => {
                   className="font-medium flex items-center justify-between gap-1 hover:text-green-600 hover:scale-105"
                 >
                   <RiDiscountPercentLine className="text-green-600 text-2xl" />
-                  <p>التخفيضات</p>
+                  <p>{t('offers')}</p>
                 </Link>
               </li>
               <li>
@@ -63,7 +71,7 @@ const Navbar = () => {
                   className="font-medium flex items-center justify-between gap-1 transition-all duration-300 hover:text-green-600 hover:scale-105"
                 >
                   <MdFavoriteBorder className="text-green-600 text-2xl hover:text-red-600" />
-                  <p>المفضله</p>
+                  <p>{t('favorites')}</p>
                 </Link>
               </li>
             </ul>
