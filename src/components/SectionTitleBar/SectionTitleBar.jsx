@@ -14,7 +14,7 @@ const SectionTitleBar = (props) => {
 
   return (
     <div className="flex items-center justify-between mt-10">
-      <h1 className="text-2xl">{props.title}</h1>
+      <h1 className="text-2xl sm:text-3xl">{props.title}</h1>
       <Link to={props.link} className="flex items-center justify-center gap-1 group">
         <p className="text-blue-500">{t("more")}</p>
         <ArrowIcon className="text-blue-500 transform transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />

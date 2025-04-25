@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import SectionTitleBar from "../../components/SectionTitleBar/SectionTitleBar";
 import CardCarousel from "../../components/CardCarousel/CardCarousel";
 import CategoriesCard from "../../components/CategoriesCard/CategoriesCard";
+import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 const products = [
   {
@@ -58,6 +60,9 @@ const products = [
   },
 ];
 
+
+
+
 const HomePage = () => {
   const { t, i18n } = useTranslation();
   useEffect(() => {
@@ -79,6 +84,10 @@ const HomePage = () => {
         <CardCarousel items={products} CardComponent={CategoriesCard} />
         {/* ===== Products besr siller */}
         <SectionTitleBar title={t("best-seller")} link={"/"}/>
+        {/* <ProductCarousel items={product}/> */}
+
+        <ProductCard/>
+
       </Container>
     </div>
   );
