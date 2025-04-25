@@ -25,13 +25,13 @@ const Navbar = () => {
 
 
   return (
-    <nav className="navbar p-2.5 h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
+    <nav className="navbar p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
     <Container>
       <div className="flex items-center justify-between">
         {/* ===== Logo ===== */}
         <div className="left">
           <Link to={"/"}>
-            <img src={logo} alt="logo" className="w-16 h-16" />
+            <img src={logo} alt="logo" className="w-12 h-12 sm:w-16 sm:h-16" />
           </Link>
         </div>
         {/* ===== Links ====== */}
