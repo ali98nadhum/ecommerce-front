@@ -20,19 +20,19 @@ const LanguageSwitcher = () => {
         onClick={() => setOpenLangMenu((prev) => !prev)}
       />
       {openLangMenu && (
-        <div className="absolute top-full mt-6 right-0 z-50 bg-white border border-gray-200 rounded-md shadow-lg w-32 text-sm">
+        <div className="absolute top-full mt-5 sm:mt-7 right-0 z-50 bg-white border border-gray-200 rounded-md shadow-lg w-24 sm:w-32 text-sm">
           <button
             onClick={() => changeLanguage("ar")}
             className="flex items-center w-full px-4 py-2 text-right gap-2 hover:bg-gray-100"
           >
-            <img src={flagSA} alt="العربية" className="w-5 h-5" />
+            <img src={flagSA} alt="العربية" className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>العربية</span>
           </button>
           <button
             onClick={() => changeLanguage("en")}
             className="flex items-center w-full px-4 py-2 text-right gap-2 hover:bg-gray-100"
           >
-            <img src={flagUS} alt="English" className="w-5 h-5" />
+            <img src={flagUS} alt="English" className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>English</span>
           </button>
         </div>
