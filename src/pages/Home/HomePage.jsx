@@ -11,53 +11,58 @@ const products = [
   {
     name: "هاتف سامسونج",
     price: "450,000",
-    image: "https://images.samsung.com/is/image/samsung/assets/cl/home/2025/w6/BANNER-s25-P.png?imwidth=1366",
+    image:
+      "https://images.samsung.com/is/image/samsung/assets/cl/home/2025/w6/BANNER-s25-P.png?imwidth=1366",
   },
   {
     name: "سوني بلايستيشن",
     price: "600,000",
-    image: "https://image.makewebeasy.net/makeweb/m_1920x0/TPguOW5od/Sony_page%2FBanner_Sony_03.jpg?v=202405291",
+    image:
+      "https://image.makewebeasy.net/makeweb/m_1920x0/TPguOW5od/Sony_page%2FBanner_Sony_03.jpg?v=202405291",
   },
   {
     name: "هواوي نوفا",
     price: "380,000",
-    image: "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
   },
   {
     name: "ايفون 15",
     price: "1,200,000",
-    image: "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
+    image:
+      "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
   },
   {
     name: "ايفون 15",
     price: "1,200,000",
-    image: "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
+    image:
+      "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
   },
   {
     name: "ايفون 15",
     price: "1,200,000",
-    image: "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
+    image:
+      "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
   },
   {
     name: "ايفون 15",
     price: "1,200,000",
-    image: "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
+    image:
+      "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
   },
   {
     name: "ايفون 15",
     price: "1,200,000",
-    image: "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
+    image:
+      "https://as1.ftcdn.net/jpg/03/36/02/16/1000_F_336021608_AqJQDNtfEioWfCHLJrNbH4t13TaPfL6f.jpg",
   },
 ];
-
-
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
   useEffect(() => {
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
   }, [i18n.language]);
-
 
   return (
     <div className="home">
@@ -69,11 +74,11 @@ const HomePage = () => {
         </div>
         {/* ===== Carousel ===== */}
         <Carousel />
-        {/* ===== SectionTitleBar ===== */}
-        <SectionTitleBar title={t("category-title")} link={"/category"} />
         {/* ===== CategoriesCard Carousel ===== */}
+        <SectionTitleBar title={t("category-title")} link={"/category"} />
         <CardCarousel items={products} CardComponent={CategoriesCard} />
-      
+        {/* ===== Products besr siller */}
+        <SectionTitleBar title={t("best-seller")} link={"/"}/>
       </Container>
     </div>
   );
