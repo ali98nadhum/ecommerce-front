@@ -23,7 +23,8 @@ const Carousel = () => {
   };
 
   return (
-    <div className="w-full max-w-sm sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-5xl mx-auto mt-10">
+    <div className="w-full overflow-hidden mt-10">
+    <div className="mx-auto max-w-screen-sm sm:max-w-screen-md md:max-w-3xl lg:max-w-4xl xl:max-w-5xl px-2 sm:px-4">
       <Slider {...settings}>
         {images.map((src, idx) => (
           <div key={idx}>
@@ -36,6 +37,11 @@ const Carousel = () => {
         ))}
       </Slider>
     </div>
+  </div>
+  
+  
+  
+  
   );
 };
 
