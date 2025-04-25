@@ -73,6 +73,7 @@ const HomePage = () => {
         <SectionTitleBar title={t("category-title")} link={"/category"} />
         {/* ===== CategoriesCard Carousel ===== */}
         <CardCarousel items={products} CardComponent={CategoriesCard} />
+      
       </Container>
     </div>
   );
