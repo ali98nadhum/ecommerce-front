@@ -62,9 +62,9 @@ const HomePage = () => {
   return (
     <div className="home">
       <Container>
-        <h1 className="text-3xl p-2 mt-5">{t("home")}</h1>
+        <h1 className="text-2xl sm:text-3xl p-2 mt-5">{t("home")}</h1>
         {/* ===== Serach box ===== */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mt-3">
           <SearchBar />
         </div>
         {/* ===== Carousel ===== */}
