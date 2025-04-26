@@ -60,6 +60,14 @@ const products = [
   },
 ];
 
+const brands = [
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+];
+
 const HomePage = () => {
   const { t, i18n } = useTranslation();
   useEffect(() => {
