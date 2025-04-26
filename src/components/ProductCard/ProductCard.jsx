@@ -1,7 +1,9 @@
-import React,{useEffect} from "react";
+import React,{useEffect , useState} from "react";
 import { FaCartPlus } from "react-icons/fa6";
+import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import "./productCard.css";
 
 const product = {
   name: "Casual Shoes",
@@ -14,6 +16,7 @@ const product = {
 };
 
 const ProductCard = ({item}) => {
+  const [isFavorite, setIsFavorite] = useState(false);
    const { t, i18n } = useTranslation();
     useEffect(() => {
       document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
@@ -28,6 +31,17 @@ const ProductCard = ({item}) => {
             alt=""
             className="w-full h-28 sm:h-40 object-cover"
           />
+         <button
+  onClick={() => setIsFavorite(!isFavorite)}
+  className={`absolute top-2 right-2 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition ${isFavorite ? 'animate-shake' : ''}`}
+>
+  {isFavorite ? (
+    <MdFavorite className="text-red-500 text-xl" />
+  ) : (
+    <MdFavoriteBorder className="text-gray-500 text-xl" />
+  )}
+</button>
+
         </div>
         <p className="text-center my-3 text-gray-500 text-[14px]">
             {item.name} 
