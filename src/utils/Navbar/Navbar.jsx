@@ -19,13 +19,16 @@ const Navbar = () => {
   const cartItemCount = 6;
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [user, setUser] = useState(true);
+  
   useEffect(() => {
     document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
   }, [i18n.language]);
 
 
+
+
   return (
-    <nav className="navbar p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
+    <nav className="navbar top-0 left-0 right-0 z-50 fixed p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
     <Container>
       <div className="flex items-center justify-between">
         {/* ===== Logo ===== */}
