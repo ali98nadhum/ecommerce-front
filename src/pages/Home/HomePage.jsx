@@ -79,11 +79,14 @@ const HomePage = () => {
         {/* ===== CategoriesCard Carousel ===== */}
         <SectionTitleBar title={t("category-title")} link={"/category"} />
         <CardCarousel items={products} CardComponent={CategoriesCard} />
-        {/* ===== Products besr siller */}
+        {/* ===== Products besr siller ===== */}
         <SectionTitleBar title={t("best-seller")} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
-        {/* ===== Products besr siller */}
+        {/* ===== Products besr siller ===== */}
         <SectionTitleBar title={"التخفيضات"} link={"/"} />
+        <ProductCarousel items={products} CardComponent={ProductCard} />
+        {/* ===== New Product ===== */}
+        <SectionTitleBar title={"وصل حديثا"} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
       </Container>
     </div>
