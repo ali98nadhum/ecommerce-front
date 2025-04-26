@@ -8,6 +8,7 @@ import CardCarousel from "../../components/CardCarousel/CardCarousel";
 import CategoriesCard from "../../components/CategoriesCard/CategoriesCard";
 import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import BrandCard from "../../components/BrandCard/BrandCard";
 
 const products = [
   {
@@ -66,6 +67,41 @@ const brands = [
     image:
       "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
   },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
+  {
+    name: "هواوي ",
+    image:
+      "https://avestastorage.blob.core.windows.net/root/root/images/1318420222banner-fmc-huawei-logo.jpg",
+  },
 ];
 
 const HomePage = () => {
@@ -93,6 +129,9 @@ const HomePage = () => {
         {/* ===== Products besr siller ===== */}
         <SectionTitleBar title={"التخفيضات"} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
+        {/* ===== Brand card ===== */}
+        <SectionTitleBar title={"البراندات"} link={"/"} />
+        <CardCarousel items={brands} CardComponent={BrandCard}/>
         {/* ===== New Product ===== */}
         <SectionTitleBar title={"وصل حديثا"} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
