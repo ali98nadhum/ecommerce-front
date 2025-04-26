@@ -13,33 +13,33 @@ const product = {
     "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage.png",
 };
 
-const ProductCard = () => {
+const ProductCard = ({item}) => {
    const { t, i18n } = useTranslation();
     useEffect(() => {
       document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
     }, [i18n.language]);
   
   return (
-    <div className="bg-white w-[170px] h-[320px] rounded-2xl shadow-md overflow-hidden p-3 flex flex-col justify-between">
+    <div className="bg-white w-full h-[280px] sm:h-[320px] sm:w-[200px] rounded-2xl shadow-md overflow-hidden p-3  flex flex-col gap-8 sm:gap-6">
       <div>
         <div className="relative">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeh0Gev8RT6GQWCqAFVS2UCPCZATFTI8Lu6maNH_QChfMeLoHZ33NSDobZpKjyaggxy0k&usqp=CAU"
+            src={item.image}
             alt=""
-            className="w-full h-40 object-cover"
+            className="w-full h-28 sm:h-40 object-cover"
           />
         </div>
         <p className="text-center my-3 text-gray-500 text-[14px]">
-          بس اس ان 10 امريكي
+            {item.name} 
         </p>
-        <p className="text-black font-bold text-center">د.ع 15,000</p>
+        <p className="text-black text-[14px] sm:text-[18px] font-bold text-center">د.ع {item.price},000</p>
       </div>
 
       <Link
         to={"/product/:id"}
-        className="mt-3 bg-blue-500 text-white text-sm py-1 px-3 rounded hover:bg-blue-600 transition flex items-center justify-between"
+        className=" bg-blue-500 text-white py-1 px-3 rounded hover:bg-blue-600 transition flex items-center justify-between"
       >
-        <p> {t("add-to-card")} </p>
+        <p className="text-[12px] sm:text-sm"> {t("add-to-card")} </p>
         <FaCartPlus />
       </Link>
     </div>

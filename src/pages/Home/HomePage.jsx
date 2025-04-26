@@ -84,11 +84,12 @@ const HomePage = () => {
         <CardCarousel items={products} CardComponent={CategoriesCard} />
         {/* ===== Products besr siller */}
         <SectionTitleBar title={t("best-seller")} link={"/"}/>
-        {/* <ProductCarousel items={product}/> */}
+        <ProductCarousel items={products} CardComponent={ProductCard}/>
 
-        <ProductCard/>
 
-      </Container>
+        </Container>
+        
+
     </div>
   );
 };
