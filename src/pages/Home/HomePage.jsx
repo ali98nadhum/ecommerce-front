@@ -127,13 +127,13 @@ const HomePage = () => {
         <SectionTitleBar title={t("best-seller")} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
         {/* ===== Products besr siller ===== */}
-        <SectionTitleBar title={"التخفيضات"} link={"/"} />
+        <SectionTitleBar title={t("Discounts")} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
         {/* ===== Brand card ===== */}
-        <SectionTitleBar title={"البراندات"} link={"/"} />
+        <SectionTitleBar title={t("Brands")} link={"/"} />
         <CardCarousel items={brands} CardComponent={BrandCard}/>
         {/* ===== New Product ===== */}
-        <SectionTitleBar title={"وصل حديثا"} link={"/"} />
+        <SectionTitleBar title={t("Latest-Products")} link={"/"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
       </Container>
     </div>
@@ -141,3 +141,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
