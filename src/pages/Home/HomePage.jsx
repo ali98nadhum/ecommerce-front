@@ -111,7 +111,7 @@ const HomePage = () => {
   }, [i18n.language]);
 
   return (
-    <div className="home">
+    <div className="home mt-28">
       <Container>
         <h1 className="text-2xl sm:text-3xl p-2 mt-5">{t("home")}</h1>
         {/* ===== Serach box ===== */}

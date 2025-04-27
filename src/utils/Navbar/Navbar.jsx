@@ -28,7 +28,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="navbar top-0 left-0 right-0 z-50 fixed p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
+    <nav className="navbar top-0 left-0 right-0 z-50 fixed mt-80 p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
     <Container>
       <div className="flex items-center justify-between">
         {/* ===== Logo ===== */}
