@@ -11,6 +11,7 @@ import { GoHome } from "react-icons/go";
 import Dropdown from "../dropdown/Dropdown";
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from "../../components/LanguageSwitcher/LanguageSwitcher";
+import TopHeader from "../../components/TopHeader/TopHeader";
 import "./navbar.css";
 
 
@@ -24,11 +25,15 @@ const Navbar = () => {
     document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
   }, [i18n.language]);
 
+ 
+
 
 
 
   return (
-    <nav className="navbar top-0 left-0 right-0 z-50 fixed mt-80 p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
+    <div className="fixed top-0 left-0 z-50 w-full">
+    <TopHeader/>
+    <nav  className="navbar  p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
     <Container>
       <div className="flex items-center justify-between">
         {/* ===== Logo ===== */}
@@ -121,6 +126,7 @@ const Navbar = () => {
       </div>
     </Container>
   </nav>
+  </div>
   );
 };
 

@@ -1,20 +1,25 @@
-import React from 'react'
+import React, { useState } from "react";
+import { CiDiscount1 } from "react-icons/ci";
+import { IoClose } from "react-icons/io5";
 
 const TopHeader = () => {
+  const [isBannerVisible , setIsBannerVisible] = useState(true);
   return (
-    <div class="w-full flex items-center justify-between px-4 md:px-14 py-1 font-medium text-sm text-white text-center bg-gray-800">
-    <p>Get 20% OFF on Your First Order!</p>
-    <div class="flex items-center space-x-6">
-        <button type="button" class="font-normal text-gray-800 bg-white px-7 py-2 rounded-full">Claim Offer</button>
-        <button type="button">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="12.532" width="17.498" height="2.1" rx="1.05" transform="rotate(-45.74 0 12.532)" fill="#fff"/>
-                <rect x="12.533" y="13.915" width="17.498" height="2.1" rx="1.05" transform="rotate(-135.74 12.533 13.915)" fill="#fff"/>
-            </svg>
+    <>
+    {isBannerVisible && (
+        <div class="w-full h-16 flex items-center justify-between px-4 md:px-14 py-1 font-medium text-sm text-white text-center bg-gray-800">
+        <div></div>
+        <div className="flex items-center justify-between gap-4 sm:gap-8">
+          <p className="sm:text-[18px]">تخفيضات كبيره كل شهر</p>
+          <CiDiscount1 className="text-amber-500 text-3xl" />
+        </div>
+        <button onClick={() => setIsBannerVisible(false)}>
+          <IoClose className="text-white text-3xl cursor-pointer" />
         </button>
-    </div>
-</div>
-  )
-}
+      </div>
+    )}
+    </>
+  );
+};
 
-export default TopHeader
+export default TopHeader;
