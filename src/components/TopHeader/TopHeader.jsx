@@ -13,7 +13,7 @@ const TopHeader = () => {
   return (
     <>
     {isBannerVisible && (
-        <div class="w-full h-16 flex items-center justify-between px-4 md:px-14 py-1 font-medium text-sm text-white text-center bg-gray-800">
+        <div className="w-full h-16 flex items-center justify-between px-4 md:px-14 py-1 font-medium text-sm text-white text-center bg-gray-800">
         <div></div>
         <div className="flex items-center justify-between gap-4 sm:gap-8">
           <p className="sm:text-[18px]"> {t("Discount-des")} </p>
