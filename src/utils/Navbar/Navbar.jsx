@@ -2,7 +2,7 @@ import React, { useState , useEffect } from "react";
 import logo from "../../assets/logo.png";
 import avatar from "../../assets/avatar.svg";
 import Container from "../../components/Container/Container";
-import { Link } from "react-router-dom";
+import { Link , useLocation } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { RiDiscountPercentLine } from "react-icons/ri";
 import { MdFavoriteBorder} from "react-icons/md";
@@ -16,6 +16,8 @@ import "./navbar.css";
 
 
 const Navbar = () => {
+  const location = useLocation();
+  const { pathname } = location;
   const { t, i18n } = useTranslation();
   const cartItemCount = 6;
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -26,7 +28,9 @@ const Navbar = () => {
   }, [i18n.language]);
 
  
-
+  if (pathname === "/login") {
+    return null;
+  }
 
 
 
