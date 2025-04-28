@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Navbar from "../src/utils/Navbar/Navbar";
 import HomePage from "../src/pages/Home/HomePage";
-import TopHeader from "../src/components/TopHeader/TopHeader";
+import BottomNavigation from "../src/utils/BottomNavigation/BottomNavigation";
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
+      <BottomNavigation/>
     </>
   );
 }
