@@ -18,6 +18,15 @@
     "Discounts": "التخفيضات",
     "Brands": "البراندات",
     "Latest-Products": "وصل حديثا",
-    "Discount-des": "تخفيضات كبيره كل شهر"
+    "Discount-des": "تخفيضات كبيره كل شهر",
+    "email": "البريد الألكتروني",
+    "password": "كلمه المرور",
+    "forget-password": "نسيت كلمه المرور",
+    "create-account": "أنشاء حساب",
+    "don't-have-account": "ليس لديك حساب",
+    "invalid-email": "الاميل غير صالح",
+    "Email-required": "الاميل مطلوب",
+    "Password-required": "يرجى ادخال الرمز",
+    "min-password": "الباسورد لازم يكون 8 احرف على الاقل"
   }
   

@@ -17,6 +17,15 @@
     "Discounts": "Discounts",
     "Brands": "Brands",
     "Latest-Products": "Latest Products",
-    "Discount-des": "Big discounts every month"
+    "Discount-des": "Big discounts every month",
+    "email": "Email",
+    "password": "Password",
+    "forget-password": "Forgot your password",
+    "create-account": "Create account",
+    "don't-have-account": "You don't have an account",
+    "invalid-email": "Inalid email",
+    "Email-required": "Email is required",
+    "Password-required": "Password is required",
+    "min-password": "The password must be 8 characters long."
   }
   

@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { useTranslation } from "react-i18next";
+
 
 const LoginForm = () => {
+  const { t, i18n } = useTranslation();
   const [showPassword, setShowPassword] = useState(false);
   const initialValues = {
     email: "",
     password: "",
   };
 
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+  }, [i18n.language]);
+
   const validationSchema = Yup.object({
-    email: Yup.string().email("الاميل غير صالح").required("الاميل مطلوب"),
+    email: Yup.string().email(t("invalid-email")).required(t("Email-required")),
     password: Yup.string()
-      .min(8, "الباسورد لازم يكون 8 احرف على الاقل")
-      .required("يرجى ادخال الباسورد"),
+      .min(8, t("min-password"))
+      .required(t("Password-required")),
   });
 
   const handleSubmit = (values) => {
@@ -35,7 +42,7 @@ const LoginForm = () => {
               htmlFor="email"
               className="block mb-1 text-sm font-semibold text-gray-700"
             >
-              البريد الإلكتروني
+              {t("email")}
             </label>
             <Field
               name="email"
@@ -56,7 +63,7 @@ const LoginForm = () => {
               htmlFor="password"
               className="block mb-1 text-sm font-semibold text-gray-700"
             >
-              كلمة المرور
+               {t("password")}
             </label>
             <div className="relative">
               <Field
@@ -67,7 +74,7 @@ const LoginForm = () => {
               />
               <button
                 type="button"
-                className="absolute top-2 left-2 cursor-pointer"
+                className={`absolute top-2 ${i18n.language === "ar" ? "left-2" : "right-2"} cursor-pointer`}
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {" "}
@@ -83,8 +90,7 @@ const LoginForm = () => {
 
           <div className="flex items-center justify-end">
             <Link to={""}>
-              {" "}
-              <p className="text-[12px] text-blue-600">نسيت كلمه المرور</p>{" "}
+              <p className="text-[12px] text-blue-600"> {t("forget-password")} </p>{" "}
             </Link>
           </div>
 
@@ -93,13 +99,13 @@ const LoginForm = () => {
             type="submit"
             className="w-full py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-all"
           >
-            تسجيل الدخول
+             {t("login")}
           </button>
 
           <div className="text-center text-sm text-gray-500 mt-4">
-            ليس لديك حساب؟
+            {t("don't-have-account")}?
             <span className="text-blue-500 hover:underline cursor-pointer">
-              إنشاء حساب
+                {t("create-account")}
             </span>
           </div>
         </Form>
