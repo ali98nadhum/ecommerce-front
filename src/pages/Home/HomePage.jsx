@@ -112,7 +112,7 @@ const HomePage = () => {
   }, [i18n.language]);
 
   return (
-    <div className="home pt-32 sm:pt-36 mb-28">
+    <div className="home mb-28">
       <Container>
         <h1 className="text-2xl sm:text-3xl p-2 mt-5">{t("home")}</h1>
         {/* ===== Serach box ===== */}
@@ -125,7 +125,7 @@ const HomePage = () => {
         <SectionTitleBar title={t("category-title")} link={"/category"} />
         <CardCarousel items={products} CardComponent={CategoriesCard} />
         {/* ===== Products besr siller ===== */}
-        <SectionTitleBar title={t("best-seller")} link={"/"} />
+        <SectionTitleBar title={t("best-seller")} link={"/best-seller"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
         {/* ===== Products besr siller ===== */}
         <SectionTitleBar title={t("Discounts")} link={"/"} />

@@ -15,7 +15,7 @@ import TopHeader from "../../components/TopHeader/TopHeader";
 import "./navbar.css";
 
 
-const Navbar = () => {
+const Navbar = ({ isBannerVisible, setIsBannerVisible }) => {
   const location = useLocation();
   const { pathname } = location;
   const { t, i18n } = useTranslation();
@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 left-0 z-50 w-full">
-    <TopHeader/>
+    <TopHeader isBannerVisible={isBannerVisible} setIsBannerVisible={setIsBannerVisible}/>
     <nav  className="navbar  p-2.5 h-16 sm:h-20 w-full flex items-center shadow-md shadow-gray-400/30 bg-white">
     <Container>
       <div className="flex items-center justify-between">
