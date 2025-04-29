@@ -14,6 +14,7 @@ const products = [
   {
     name: "هاتف سامسونج",
     price: "450",
+    offerPrice: "200",
     image:
       "https://images.samsung.com/is/image/samsung/assets/cl/home/2025/w6/BANNER-s25-P.png?imwidth=1366",
   },
