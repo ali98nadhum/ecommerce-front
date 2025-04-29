@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useEffect} from "react";
 import loginImage from "../../assets/login-image.jpg";
 import Container from "../../components/Container/Container";
 import LoginForm from "../../components/LoginForm/LoginForm";
+import { useTranslation } from "react-i18next";
+
 
 const LoginPage = () => {
+   const { t, i18n } = useTranslation();
+    useEffect(() => {
+      document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    }, [i18n.language]);
   return (
     <div className="min-h-screen  flex items-center justify-center mb-12">
       <Container>
@@ -19,7 +25,7 @@ const LoginPage = () => {
 
           {/* title*/}
           <h1 className="text-center text-2xl font-bold text-gray-800 mb-8">
-            تسجيل الدخول
+            {t("login")}
           </h1>
 
           {/* ===== Login Box ===== */}
