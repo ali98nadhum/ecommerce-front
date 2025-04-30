@@ -61,7 +61,7 @@ const BrandsPage = () => {
       return (
         <div className="pt-6 pb-32">
           <Container>
-            <h1 className="text-[18px] sm:text-2xl">{t("category-title")} </h1>
+            <h1 className="text-[18px] sm:text-2xl">{t("Brands")} </h1>
             <div className="grid grid-cols-3 md:grid-cols-4 gap-4 pt-6">
               {brands.map((brand) => (
                 <BrandCard key={brand.id} item={brand} />
