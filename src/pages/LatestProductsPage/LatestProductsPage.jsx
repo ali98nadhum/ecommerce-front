@@ -120,7 +120,7 @@ const LatestProductsPage = () => {
   return (
     <div className="pt-6 pb-32">
       <Container>
-        <h1 className="text-[18px] sm:text-2xl">{t("best-seller")} </h1>
+        <h1 className="text-[18px] sm:text-2xl">{t("Latest-Products")} </h1>
         <div className="pt-4 flex items-center justify-center">
           <SearchBar />
         </div>
