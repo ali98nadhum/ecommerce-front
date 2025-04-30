@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Container from "../../components/Container/Container";
-import BrandCard from "../../components/BrandCard/BrandCard";
 import CategoriesCard from "../../components/CategoriesCard/CategoriesCard";
 
 

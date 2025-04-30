@@ -7,6 +7,7 @@ import BestSellerPage from "../src/pages/BestSellerPage/BestSellerPage";
 import DiscountPage from "../src/pages/DiscountPage/DiscountPage";
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import BrandsPage from './pages/BrandsPage/BrandsPage';
+import LatestProductsPage from './pages/LatestProductsPage/LatestProductsPage';
 import Layout from "../src/components/Layout";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path='/discount-product' element={ <Layout> <DiscountPage/> </Layout> }/>
         <Route path='/all-category' element={ <Layout> <CategoryPage/> </Layout> }/>
         <Route path='/all-brands' element={ <Layout> <BrandsPage/> </Layout> }/>
+        <Route path='/latest-products' element={ <Layout> <LatestProductsPage/> </Layout> }/>
       </Routes>
       <BottomNavigation/>
     </>
