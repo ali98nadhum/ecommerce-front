@@ -131,7 +131,7 @@ const HomePage = () => {
         <SectionTitleBar title={t("Discounts")} link={"/discount-product"} />
         <ProductCarousel items={products} CardComponent={ProductCard} />
         {/* ===== Brand card ===== */}
-        <SectionTitleBar title={t("Brands")} link={"/"} />
+        <SectionTitleBar title={t("Brands")} link={"/all-brands"} />
         <CardCarousel items={brands} CardComponent={BrandCard}/>
         {/* ===== New Product ===== */}
         <SectionTitleBar title={t("Latest-Products")} link={"/"} />
