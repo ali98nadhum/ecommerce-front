@@ -122,7 +122,7 @@ const HomePage = () => {
         {/* ===== Carousel ===== */}
         <Carousel />
         {/* ===== CategoriesCard Carousel ===== */}
-        <SectionTitleBar title={t("category-title")} link={"/category"} />
+        <SectionTitleBar title={t("category-title")} link={"/all-category"} />
         <CardCarousel items={products} CardComponent={CategoriesCard} />
         {/* ===== Products besr siller ===== */}
         <SectionTitleBar title={t("best-seller")} link={"/best-seller"} />
