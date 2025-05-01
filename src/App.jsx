@@ -23,7 +23,7 @@ function App() {
         <Route path='/all-category' element={ <Layout> <CategoryPage/> </Layout> }/>
         <Route path='/all-brands' element={ <Layout> <BrandsPage/> </Layout> }/>
         <Route path='/latest-products' element={ <Layout> <LatestProductsPage/> </Layout> }/>
-        <Route path='/register' element={ <Layout> <RegisterPage/> </Layout> }/>
+        <Route path='/register' element={  <RegisterPage/> }/>
       </Routes>
       <BottomNavigation/>
     </>
