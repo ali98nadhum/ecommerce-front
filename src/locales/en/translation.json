@@ -26,6 +26,9 @@
     "invalid-email": "Inalid email",
     "Email-required": "Email is required",
     "Password-required": "Password is required",
-    "min-password": "The password must be 8 characters long."
+    "min-password": "The password must be 8 characters long.",
+    "full-name": "Full Name",
+    "username": "Username",
+    "phone": "Phone Number"
   }
   
