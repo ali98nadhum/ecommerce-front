@@ -29,6 +29,8 @@
     "min-password": "The password must be 8 characters long.",
     "full-name": "Full Name",
     "username": "Username",
-    "phone": "Phone Number"
+    "phone": "Phone Number",
+    "register": "Register",
+    "have-account": "Do yo have account ?"
   }
   

@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { useTranslation } from "react-i18next";
 
 const RegisterForm = () => {
+     const { t, i18n } = useTranslation();
+            useEffect(() => {
+              document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+            }, [i18n.language]);
     const initialValues = {
         name: "",
         username: "",
@@ -45,9 +50,9 @@ const RegisterForm = () => {
           >
             <Form className="space-y-4">
 
-              {/* الاسم */}
+              {/* Name input */}
               <div>
-                <label className="block mb-1 font-medium">الاسم الكامل</label>
+                <label className="block mb-1 font-medium"> {t("full-name")} </label>
                 <Field
                   name="name"
                   type="text"
@@ -60,9 +65,9 @@ const RegisterForm = () => {
                 />
               </div>
 
-              {/* اسم المستخدم */}
+              {/* Username input  */}
               <div>
-                <label className="block mb-1 font-medium">اسم المستخدم</label>
+                <label className="block mb-1 font-medium"> {t("username")} </label>
                 <Field
                   name="username"
                   type="text"
@@ -75,9 +80,9 @@ const RegisterForm = () => {
                 />
               </div>
 
-              {/* البريد الإلكتروني */}
+              {/* Email input  */}
               <div>
-                <label className="block mb-1 font-medium">البريد الإلكتروني</label>
+                <label className="block mb-1 font-medium"> {t("email")} </label>
                 <Field
                   name="email"
                   type="email"
@@ -90,9 +95,9 @@ const RegisterForm = () => {
                 />
               </div>
 
-              {/* كلمة المرور */}
+              {/* Password input  */}
               <div>
-                <label className="block mb-1 font-medium">كلمة المرور</label>
+                <label className="block mb-1 font-medium"> {t("password")} </label>
                 <Field
                   name="password"
                   type="password"
@@ -105,9 +110,9 @@ const RegisterForm = () => {
                 />
               </div>
 
-              {/* رقم الهاتف */}
+              {/* phone number input  */}
               <div>
-                <label className="block mb-1 font-medium">رقم الهاتف</label>
+                <label className="block mb-1 font-medium"> {t("phone")} </label>
                 <Field
                   name="phone"
                   type="phone"
@@ -120,19 +125,18 @@ const RegisterForm = () => {
                 />
               </div>
 
-              {/* زر التسجيل */}
+              {/* Register btn  */}
               <button
                 type="submit"
                 className="w-full bg-blue-400 hover:bg-blue-600 text-white py-2 rounded font-semibold transition"
               >
-                تسجيل
+                {t("register")}
               </button>
 
-              {/* رابط تسجيل الدخول */}
               <p className="text-center text-sm mt-4">
-                لديك حساب؟{" "}
-                <Link to="/login" className="text-blue-400 font-semibold hover:underline">
-                  تسجيل الدخول
+                 {t("have-account")}
+                <Link to="/login" className="text-blue-400 font-semibold hover:underline mx-2">
+                   {t("login")}
                 </Link>
               </p>
             </Form>
