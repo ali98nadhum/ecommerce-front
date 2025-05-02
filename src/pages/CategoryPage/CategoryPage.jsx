@@ -4,6 +4,7 @@ import Container from "../../components/Container/Container";
 import CategoriesCard from "../../components/CategoriesCard/CategoriesCard";
 
 
+
 const products = [
   {
     id:1,
