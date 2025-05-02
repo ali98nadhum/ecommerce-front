@@ -9,6 +9,7 @@ import CategoryPage from './pages/CategoryPage/CategoryPage';
 import BrandsPage from './pages/BrandsPage/BrandsPage';
 import LatestProductsPage from './pages/LatestProductsPage/LatestProductsPage';
 import RegisterPage from "../src/pages/RegisterPage/RegisterPage";
+import ProductPage from './pages/ProductPage/ProductPage';
 import Layout from "../src/components/Layout";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/all-category' element={ <Layout> <CategoryPage/> </Layout> }/>
         <Route path='/all-brands' element={ <Layout> <BrandsPage/> </Layout> }/>
         <Route path='/latest-products' element={ <Layout> <LatestProductsPage/> </Layout> }/>
+        <Route path='/product/:id' element={ <Layout> <ProductPage/> </Layout> }/>
         <Route path='/register' element={  <RegisterPage/> }/>
       </Routes>
       <BottomNavigation/>
