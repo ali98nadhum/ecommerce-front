@@ -10,6 +10,7 @@ import ProductCarousel from "../../components/ProductCarousel/ProductCarousel";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import BrandCard from "../../components/BrandCard/BrandCard";
 
+
 const products = [
   {
     name: "هاتف سامسونج",
